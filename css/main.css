@@ -83,7 +83,7 @@ small, .font_small {font-size: 0.618em;}
   color: #c7c7c7;
 }
 
-.col-sm-4 img {
+.porfolio-button {
   margin-bottom: 2em;
 }
 
@@ -168,7 +168,7 @@ footer .designer {
 
 
 /* MEDIA QUERIES */
-@media(max-width:768px) {
+@media (max-width:768px) {
   body {
     margin-bottom: 140px;
   }
@@ -194,12 +194,13 @@ footer .designer {
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .mobile {
     display: none;
   }
   .icons i {
-    font-size: 5em;
+    font-size: 3em;
+    padding: 5px;
   }
 }
 
