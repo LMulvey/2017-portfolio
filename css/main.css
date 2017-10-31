@@ -178,6 +178,11 @@ footer .designer {
     font-size: 4em;
   }
 
+  .icons i {
+    font-size: 3em;
+    padding: 5px;
+  }
+
   footer {
     height: 140px;
     text-align: center;
@@ -195,13 +200,9 @@ footer .designer {
     }
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .mobile {
     display: none;
-  }
-  .icons i {
-    font-size: 3em;
-    padding: 5px;
   }
 }
 
