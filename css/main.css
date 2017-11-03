@@ -92,6 +92,7 @@ small, .font_small {font-size: 0.618em;}
   outline: none;
   opacity: 0.8;
   transition: 0.3s;
+  border: 1px solid white;
 }
 
 .portfolio-image:hover {
