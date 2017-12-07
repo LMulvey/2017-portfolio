@@ -65,6 +65,22 @@ a:hover {
   margin-bottom: 1.5em; */
 }
 
+
+.icons .blog-link {
+  font-size: 3.5em;
+  position: relative;
+  left: -3%;
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+  display: inline-block;
+}
+
+.icons span:hover {
+  color: rgb(140, 226, 193);
+}
+
+
 .icons i {
   padding: 0 25px;
   margin: 30px 30px;
