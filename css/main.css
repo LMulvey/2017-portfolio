@@ -118,7 +118,7 @@ a:hover {
 
 .tagline {
   font-size: 1.6em;
-  background-color: rgb(36, 51, 45);
+  background-color: rgba(36, 51, 45, 0.9);
   padding: 1em 1em 0.2em 1em;
   text-align: center;
   line-height: 1.3em;
@@ -126,7 +126,7 @@ a:hover {
 }
 
 .col-sm-12 h3 {
-  background-color: rgb(27, 34, 31);
+  background-color: rgba(36, 51, 45, 0.9);
   padding: 0.2em;
 }
 
