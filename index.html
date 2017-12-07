@@ -1,10 +1,7 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Lee Mulvey</title>
     <meta name="description" content="">
@@ -12,13 +9,12 @@
 
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/ekko-lightbox.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ekko-lightbox.css">
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Tinos" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tinos|Lato" rel="stylesheet">
 
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -33,51 +29,54 @@
 
   <div class="container">
   <div class="row">
-    <div class="intro col-sm-6 col-sm-offset-3">
+    <div class="intro col-sm-8 col-sm-offset-2">
       <h1>Lee Mulvey</h1>
       <p>developer, designer, musician, filmmaker, do-er</p>
     </div>
   </div>
 
   <div class="row">
-    <div class="tagline col-sm-6 col-sm-offset-3">
-      <p>Born in <strong>ywg</strong>, raised in <strong>yeg</strong>, residing in <strong>yyc</strong>.</p>
-      <p>I like to <strong>create</strong>.</p>
-      <p>Check out my latest <em>polished</em> work.</p>
-    </div>
-  </div>
-
-  <div class="row">
-      <div class="icons col-sm-6 col-sm-offset-3">
+      <div class="icons col-sm-8 col-sm-offset-2">
         <a href="http://github.com/lmulvey">
           <i class="fa fa-github-alt fa-4x"></i>
         </a>
-        <a href="http://www.facebook.com/leemulvey">
-          <i class="fa fa-facebook fa-4x"></i>
+        <a href="http://www.stackoverflow.com/users/8246359/lmulvey">
+          <i class="fa fa-stack-overflow fa-4x"></i>
         </a>
         <a href="http://www.twitter.com/leemulvey">
           <i class="fa fa-twitter fa-4x"></i>
         </a>
       </div>
     </div>
+
+  <div class="row">
+    <div class="tagline col-sm-8 col-sm-offset-2">
+      <p>Born in <em>YWG</em>, raised in <em>YEG</em>, residing in <span class="hl">YYC</span>.</p>
+      <p><span class="hl">I <span class="heart">♥</span> creating for the web.</span></p>
+      <p>Check my <span class="hl">GitHub</span> for WIPs.<br />See examples of my published/finished work below.
+    </div>
+  </div>
+
     
 </div>
   <div class="container">
-    <div class="row portfolio">
+    <div class="row">
+        <div class="col-sm-12 text-center"><h3>Latest Work &nbsp;</h3></div>
+    </div> 
+    <div class="row">
+      <div class="col-sm-12">
       <!-- <div class="porfolio-button col-sm-4">
         <img data-toggle="modal" data-target="#kingsgate-modal" src="./img/port-kingsgate.png" class="portfolio-image img-responsive" alt="Kingsgate Automotive">
       </div> -->
       <div class="porfolio-button col-sm-4">
-          <img data-toggle="modal" data-target="#jsdrumkit-modal" src="./img/jsdrumkit1.png" class="portfolio-image img-responsive" alt="JS Drumkit">
-        </div>
-      <div class="porfolio-button col-sm-4">
         <img data-toggle="modal" data-target="#triplec-modal" src="./img/port-triplec.png" class="portfolio-image img-responsive" alt="TripleC Woodworx">
       </div>
       <div class="porfolio-button col-sm-4">
+          <img data-toggle="modal" data-target="#jsdrumkit-modal" src="./img/jsdrumkit1.png" class="portfolio-image img-responsive" alt="JS Drumkit">
+        </div>
+      <div class="porfolio-button col-sm-4">
        <img data-toggle="modal" data-target="#gilliam-modal" src="./img/port-gilliam.png" class="portfolio-image img-responsive" alt="Gilliam Burke Investigations">
       </div>
-    </div>
-    <div class="row portfolio">
       <div class="porfolio-button col-sm-4">
         <img data-toggle="modal" data-target="#ap-modal" src="./img/ap1.png" class="portfolio-image img-responsive" alt="Kingsgate Automotive">
       </div>
@@ -87,18 +86,18 @@
       <div class="porfolio-button col-sm-4">
         <img data-toggle="modal" data-target="#stratpro-modal" src="./img/sp2.png" class="portfolio-image img-responsive" alt="Gilliam Burke Investigations">
       </div>
-    </div>
+  </div>
   </div> <!-- /container -->
 
   <!-- Footer -->
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          All designs, code, custom images, logos, and wordmarks are Copyright &copy; Lee Mulvey.<br />
-          <small><em>Unless otherwise specified or credited.</em></small>
+        <div class="col-sm-6">
+          All designs, code, custom images, logos, and wordmarks are Copyright &copy; <span id="copyYear"></span> Lee Mulvey.<br />
+          <em>Unless otherwise specified or credited.</em>
         </div>
-        <div class="col-md-4 col-md-offset-2">
+        <div class="col-sm-4 col-sm-offset-2 designer">
           Designed and developed by<br/>
           <strong>Lee Mulvey</strong>
         </div>
@@ -111,12 +110,10 @@
   <div class="modal modal-fullscreen fade" id="jsdrumkit-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <h3>JS Drumkit</h3>
+          <h3 id="myModalLabel">JS Drumkit</h3>
           <p>A keyboard input drumkit designed with vanilla JS.</p>
-          <p><a href="http://www.leemulvey.com/jsdrumkit">JS Drumkit</a></p>
-          <div class="col-sm-4 col-sm-offset-4">
-          <img src="./img/jsdrumkit1.png" class="img-responsive">
-          </div>
+          <p><a href="http://www.leemulvey.com/jsdrumkit">Play Drums in the Browser</a> // 
+            <a href="http://www.github.com/lmulvey/jsdrumkit">GitHub Repo</a></p>
         </div>
       </div>
     </div>
@@ -124,10 +121,10 @@
   <div class="modal modal-fullscreen fade" id="kingsgate-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <h3>Kingsgate Automotive</h3>
+      <h3 id="myModalLabel">Kingsgate Automotive</h3>
       <p>Designed the website to be modern. Re-touched the classic wordmark to bring it a sharper definition.
         Created with WordPress in mind for ease-of-use for user and client alike.</p>
-      <p><a href="http://www.kingsgateauto.com">www.KingsgateAuto.com</a> (in progress)</p>
+      <p><a href="http://www.kingsgateauto.com">KingsgateAuto.com</a> (in progress)</p>
       <div class="col-sm-4">
         <a class="ligthbox" href="./img/kingsgate1-full.png" data-toggle="lightbox" data-gallery="kg">
           <img src="./img/kingsgate1.png" class="img-responsive">
@@ -150,20 +147,15 @@
 <div class="modal modal-fullscreen fade" id="triplec-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog">
   <div class="modal-content">
-    <h3>TripleC Woodworx</h3>
-    <p>Designed the website with ol' fashioned paper, moved into Illustrator, before building it front-end style.
-      Developed a small back-end for Marc to upload his own photos.</p>
-      <p><a href="http://www.triplec.ca">www.TripleC.ca</a></p>
-      <div class="col-sm-4 col-sm-offset-2">
-          <a class="ligthbox" href="./img/triplec1-full.png" data-toggle="lightbox" data-gallery="tc">
-            <img src="./img/triplec1.png" class="img-responsive">
-          </a>
-        </div>
-      <div class="col-sm-4">
-        <a class="ligthbox" href="./img/triplec2-full.png" data-toggle="lightbox" data-gallery="tc">
-            <img src="./img/port-triplec.png" class="img-responsive">
-        </a>
-      </div>
+    <h3 id="myModalLabel">Triple C Woodworx</h3>
+    <p>Designed and developed a portfolio website for Marc Bunder's woodworking company out of Edmonton, Alberta. 
+      The design was created in Photoshop and Illustrator using a logo provided by the client. Developed using Node.js,
+      Express, and MongoDB for collection-handling, the client can upload, crop, sort and name multiple
+      photos to easily display from his Latest projects without hassle.
+    </p>
+      <p><a href="https://triplec.ca">Triple C Woodworx</a> // 
+      <a href="http://github.com/LMulvey/triplec-node">GitHub Repo</a></p>
+      
   </div>
 </div>
 </div>
@@ -171,16 +163,11 @@
 <div class="modal modal-fullscreen fade" id="gilliam-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog">
   <div class="modal-content">
-    <h3>Gilliam Burke Investigations</h3>
+    <h3 id="myModalLabel">Gilliam Burke Investigations</h3>
     <p>Designed a professional logo for their branding and marketing materials. Prepared website mockups for a future Wordpress theme upgrade.</p>
-      <p><a href="http://www.gbinvestigations.ca">www.GBInvestigations.ca</a></p>
+      <p><a href="http://www.gbinvestigations.ca">GBInvestigations.ca</a></p>
 
-      <div class="col-sm-4 col-sm-offset-2">
-          <a class="ligthbox" href="./img/gb1-full.png" data-toggle="lightbox" data-gallery="gb">
-            <img src="./img/gb1.png" class="img-responsive">
-          </a>
-        </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 col-sm-offset-4">
         <a class="ligthbox" href="./img/gb2-full.png" data-toggle="lightbox" data-gallery="gb">
             <img src="./img/port-gilliam.png" class="img-responsive">
         </a>
@@ -192,7 +179,7 @@
 <div class="modal modal-fullscreen fade" id="ap-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <h3>Alora Paulsen</h3>
+        <h3 id="myModalLabel">Alora Paulsen</h3>
         <p>Designed a welcoming portfolio page for a local Communications Writer. Developed for Wordpress for ease of use for the client.</p>
         <p>(website no longer live)</p>
 
@@ -213,9 +200,9 @@
 <div class="modal modal-fullscreen fade" id="grow-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <h3>GrowPlanning</h3>
+        <h3 id="myModalLabel">GrowPlanning</h3>
         <p>Created a simple Wordpress website mockup for a inspirational financial advisor.</p>
-        <p>(website no longer live)</p>
+        
           <div class="col-sm-4 col-sm-offset-2">
               <a class="ligthbox" href="./img/growplanning1-full.png" data-toggle="lightbox" data-gallery="ap">
                 <img src="./img/growplanning1.png" class="img-responsive">
@@ -233,7 +220,7 @@
 <div class="modal modal-fullscreen fade" id="stratpro-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <h3>Strategic Protection Services</h3>
+        <h3 id="myModalLabel">Strategic Protection Services</h3>
         <p>Designed a professional logo for their branding and marketing materials. Prepared and deployed a Wordpress website.</p>
         <p>(website no longer live)</a></p>
 
@@ -263,14 +250,19 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-72903395-1');
 
         $(document).on('click', '[data-toggle="lightbox"]', function(event) {
             event.preventDefault();
-            if (!($('.mobile').css('display') === 'none')) $(this).ekkoLightbox();
+            if (!($('.mobile').css('display') === 'none')) $(this).ekkoLightbox({
+              alwaysShowClose: true
+            });
         });
         
+        // Never update my copyright again!
+        const date = new Date();
+        const year = date.getFullYear();
+        document.querySelector('#copyYear').innerText = year;
       </script>
     </body>
 </html>

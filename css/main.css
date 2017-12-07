@@ -7,9 +7,8 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
   line-height: 1.45;
-  background: url('../img/bg-comp.jpg') no-repeat center center;
+  background: url('../img/bg-comp.jpg') no-repeat center center fixed;
   background-size: cover;
   background-color: black;
   color: white;
@@ -18,7 +17,8 @@ body {
 }
 
 p {
-  margin-bottom: 1.3em;
+  margin-bottom: 1.4em;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4 {
@@ -39,6 +39,15 @@ h4 {font-size: 1.618em;}
 
 small, .font_small {font-size: 0.618em;}
 
+a {
+  color: rgb(99, 168, 142);
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(140, 226, 193);
+}
+
 .intro {
   text-align: center;
   border: 10px solid white;
@@ -52,33 +61,45 @@ small, .font_small {font-size: 0.618em;}
 
 .icons {
   text-align: center;
-  border-bottom: 10px solid white;
-  margin-bottom: 1.5em;
+  /* border-bottom: 10px solid white;
+  margin-bottom: 1.5em; */
 }
 
 .icons i {
-  padding: 20px 25px;
-  margin: 5px 30px;
+  padding: 0 25px;
+  margin: 30px 30px;
   color: white;
+  text-shadow: 2px 2px 0px rgb(36, 51, 45);
 }
 
 .icons i:hover {
-  color: lightsteelblue;
+  color: rgb(99, 168, 142);
+  text-decoration: none;
+}
+
+.heart {
+  color: pink;
+}
+
+.hl {
+  background-color: #9A2617;
+  padding: 5px;
 }
 
 .tagline {
   font-size: 1.6em;
-  background-color: #0e0e0e;
+  background-color: rgb(36, 51, 45);
   padding: 1em 1em 0.2em 1em;
-  margin-top: 1.5em;
   text-align: center;
   line-height: 1.3em;
+  margin-bottom: 30px;
 }
 
-.tagline i {
-  padding: 0 2px;
-  border: 2px #7c7c7c;
+.col-sm-12 h3 {
+  background-color: rgb(27, 34, 31);
+  padding: 0.2em;
 }
+
 
 .tagline a {
   color: #c7c7c7;
@@ -104,9 +125,9 @@ small, .font_small {font-size: 0.618em;}
   opacity: 1;
 }
 
-.modal-content p {
+/* .modal-content p {
   font-family: 'Tinos', serif;
-}
+} */
 
 
 footer {
