@@ -239,6 +239,7 @@ footer .designer {
     body {
         margin-bottom: 200px;
         background: url('../img/bg-mobile.jpg') no-repeat center center fixed;
+        background-size: cover;
     }
     .intro h1 {
         font-size: 4em;
