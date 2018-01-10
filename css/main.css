@@ -238,6 +238,7 @@ footer .designer {
 @media (max-width:768px) {
     body {
         margin-bottom: 140px;
+        background: url('../img/bg-mobile.jpg') no-repeat center center fixed;
     }
     .intro h1 {
         font-size: 4em;
