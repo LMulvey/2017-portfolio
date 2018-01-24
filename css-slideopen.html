@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .reverse-clicker {
+            background-color: #0e0e0e;
+            color: white;
+            transition: all 0.2s;
+        }
+
+        .col-sm-4 {
+            transition: all 0.4s;
+        }
+        .reverse-clicker:after {
+            content:'';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 0;
+            height: 0;
+            z-index: 1;
+            border-top: solid 30px #0e0e0e;
+            border-left: solid 30px transparent;
+            border-right: solid 30px transparent;
+            transition: all 0.2s ease-in;            
+        }
+        .content {
+            overflow: hidden;
+            background-color: #969090;
+            color: #0e0e0e;
+            font-size: 16px;
+            display: none;
+            height: 400px;
+            width: 400px;
+            z-index: -1;
+        }
+        .inner {
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+        <div class="col-sm-12 container"></div>
+</div>
+</body>
+<script>
+    let data = [
+    {
+        elementName: 'timetotok',
+        title: 'TimeToTok',
+        image: 'http://res.cloudinary.com/leemulvey/image/upload/c_fill,g_center,h_209,w_348/v1515652842/timetotok-portfolio.png',
+        content: `<p>Ever wondered how long it would take you to get to Tok, Alaska, <em>right now</em>?</p>
+          <p><a class="hl" target="_blank" href="http://www.timetotok.com">Find out now!</a>`
+    },
+    {
+        elementName: 'kingsgate',
+        title: 'Kingsgate',
+        image: 'http://res.cloudinary.com/leemulvey/image/upload/c_fill,g_center,h_209,w_348/v1515544025/Portfolio/kingsgate-portfolio.png',
+        content: `<p>Designed the website to be modern. Re-touched the classic wordmark to bring it a sharper definition.
+        Created with WordPress in mind for ease-of-use for user and client alike.</p>
+      <p><a class="hl" target="_blank" href="http://www.kingsgateauto.com">KingsgateAuto.com</a> (in progress)</p>`
+    },
+    {
+        elementName: 'timetotok',
+        title: 'TimeToTok',
+        image: 'http://res.cloudinary.com/leemulvey/image/upload/c_fill,g_center,h_209,w_348/v1515652842/timetotok-portfolio.png',
+        content: `<p>Ever wondered how long it would take you to get to Tok, Alaska, <em>right now</em>?</p>
+          <p><a class="hl" target="_blank" href="http://www.timetotok.com">Find out now!</a>`
+    },
+    {
+        elementName: 'kingsgate',
+        title: 'Kingsgate',
+        image: 'http://res.cloudinary.com/leemulvey/image/upload/c_fill,g_center,h_209,w_348/v1515544025/Portfolio/kingsgate-portfolio.png',
+        content: `<p>Designed the website to be modern. Re-touched the classic wordmark to bring it a sharper definition.
+        Created with WordPress in mind for ease-of-use for user and client alike.</p>
+      <p><a class="hl" target="_blank" href="http://www.kingsgateauto.com">KingsgateAuto.com</a> (in progress)</p>`
+    },
+    {
+        elementName: 'timetotok',
+        title: 'TimeToTok',
+        image: 'http://res.cloudinary.com/leemulvey/image/upload/c_fill,g_center,h_209,w_348/v1515652842/timetotok-portfolio.png',
+        content: `<p>Ever wondered how long it would take you to get to Tok, Alaska, <em>right now</em>?</p>
+          <p><a class="hl" target="_blank" href="http://www.timetotok.com">Find out now!</a>`
+    },
+    {
+        elementName: 'kingsgate',
+        title: 'Kingsgate',
+        image: 'http://res.cloudinary.com/leemulvey/image/upload/c_fill,g_center,h_209,w_348/v1515544025/Portfolio/kingsgate-portfolio.png',
+        content: `<p>Designed the website to be modern. Re-touched the classic wordmark to bring it a sharper definition.
+        Created with WordPress in mind for ease-of-use for user and client alike.</p>
+      <p><a class="hl" target="_blank" href="http://www.kingsgateauto.com">KingsgateAuto.com</a> (in progress)</p>`
+    },
+    {
+        elementName: 'timetotok',
+        title: 'TimeToTok',
+        image: 'http://res.cloudinary.com/leemulvey/image/upload/c_fill,g_center,h_209,w_348/v1515652842/timetotok-portfolio.png',
+        content: `<p>Ever wondered how long it would take you to get to Tok, Alaska, <em>right now</em>?</p>
+          <p><a class="hl" target="_blank" href="http://www.timetotok.com">Find out now!</a>`
+    },
+    {
+        elementName: 'kingsgate',
+        title: 'Kingsgate',
+        image: 'http://res.cloudinary.com/leemulvey/image/upload/c_fill,g_center,h_209,w_348/v1515544025/Portfolio/kingsgate-portfolio.png',
+        content: `<p>Designed the website to be modern. Re-touched the classic wordmark to bring it a sharper definition.
+        Created with WordPress in mind for ease-of-use for user and client alike.</p>
+      <p><a class="hl" target="_blank" href="http://www.kingsgateauto.com">KingsgateAuto.com</a> (in progress)</p>`
+    },
+    ];
+    let getHeight = function(el) {
+        let style      = window.getComputedStyle(el),
+            { display, position, visibility, maxHeight } = style,
+            wanted_height = 0;
+
+        maxHeight = maxHeight.replace('px', '').replace('%', '');
+
+       // if its not hidden we just return normal height
+       if(display !== 'none' && maxHeight !== '0') {
+           return el.offsetHeight;
+       }
+
+       // the element is hidden so:
+       // making the el block so we can meassure its height but still be hidden
+       el.style.position   = 'absolute';
+       el.style.visibility = 'hidden';
+       el.style.display    = 'block';
+
+       wanted_height     = el.offsetHeight;
+
+       // reverting to the original values
+       el.style.display    = display;
+       el.style.position   = position;
+       el.style.visibility = visibility;
+
+       return wanted_height;
+   };
+
+   let toggleSlide = function(el) {
+       let maxHeight = 0;
+
+       if(el.getAttribute('data-max-height')) {
+           // we've already used this before, so everything is setup
+           if(el.style.maxHeight.replace('px', '').replace('%', '') === '0') {
+               el.style.maxHeight = el.getAttribute('data-max-height');
+           } else {
+               el.style.maxHeight = '0';
+           }
+       } else {
+           maxHeight                      = getHeight(el) + 'px';
+           el.style['transition']         = 'max-height 0.3s ease-in-out';
+           el.style.overflowY             = 'hidden';
+           el.style.maxHeight             = '0';
+           el.setAttribute('data-max-height', maxHeight);
+           el.style.display               = 'block';
+
+           // we use setTimeout to modify maxHeight later than display (to we have the transition effect)
+           setTimeout(function() {
+               el.style.maxHeight = maxHeight;
+           }, 10);
+       }
+   };
+
+
+let bodyContainer = document.querySelector('.container');
+
+data.forEach((item,i) => {
+    let contentDiv = document.createElement('div');
+    contentDiv.classList.add('content');
+    contentDiv.id = `content-${item.elementName}`;
+    contentDiv.innerHTML = `<div class="inner"><h4>${item.title}</h4><br/>${item.content}</div>`;
+
+    let thumbnail = document.createElement('div');
+    thumbnail.classList.add('portfolio-button', 'col-sm-4');
+    thumbnail.id = `clicker-${item.elementName}`;
+    thumbnail.dataset.elementName = item.elementName;
+    thumbnail.innerHTML += `<img src="${item.image}" class="portfolio-image img-responsive" alt="${item.title}" />`;
+
+
+    thumbnail.appendChild(contentDiv);
+    bodyContainer.appendChild(thumbnail);
+});
+       
+document.querySelectorAll('.portfolio-button').forEach(el => el.addEventListener('click', function(e) {
+    let el = e.currentTarget;
+    let { elementName } = el.dataset;
+
+    if(el.classList.contains('reverse-clicker')) el.classList.remove('reverse-clicker');
+    else el.classList.add('reverse-clicker');
+   toggleSlide(document.querySelector(`#content-${elementName}`));
+    }, false)
+);
+</script>
+</html>
